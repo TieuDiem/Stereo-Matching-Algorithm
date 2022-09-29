@@ -13,14 +13,14 @@ def main():
     img_right_2 =cv2.imread(os.path.join(CWD,"images\Aloe_right_2.png"),0)
     img_right_3 =cv2.imread(os.path.join(CWD,"images\Aloe_right_3.png"),0)
 
-    depth_11 = core.pixel_wise_matching(img_left,img_right_1,16,"l1",True)
-    depth_12 = core.pixel_wise_matching(img_left,img_right_1,16,"l2",True)
+    #depth_11 = core.pixel_wise_matching(img_left,img_right_1,16,"l1",True)
+    #depth_12 = core.pixel_wise_matching(img_left,img_right_1,16,"l2",True)
 
-    depth_21 = core.window_base_matching_v1(img_left,img_right_2,16,5,"l1",True)
-    depth_22 = core.window_base_matching_v1(img_left,img_right_2,16,5,"l2",True)
+    depth_21 = core.window_base_matching_v1(img_left,img_right_1,16,5,"l1",True)
+    depth_22 = core.window_base_matching_v1(img_left,img_right_1,16,5,"l2",True)
 
-    depth_31 = core.window_base_matching_v2(img_left,img_right_2,64,3,"cosine_similarity",True)
-    depth_32 = core.window_base_matching_v2(img_left,img_right_3,64,3,"correlation_cofficient",True)
+    #depth_31 = core.window_base_matching_v2(img_left,img_right_2,64,3,"cosine_similarity",True)
+     #depth_32 = core.window_base_matching_v2(img_left,img_right_3,64,3,"correlation_cofficient",True)
 
     stop  = "Wating ..."
     return None
